@@ -12,6 +12,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AndroidBundleParser {
 
@@ -30,19 +32,20 @@ public class AndroidBundleParser {
         if(doc == null) {
             return;
         }
+        List<ImmutablePair<String, String>> pairs = new ArrayList<>();
+
         NodeList children = doc.getElementsByTagName("resources").item(0).getChildNodes();
         for (int i = 0; i<children.getLength(); i++) {
             Node childNode = children.item(i);
             if(childNode.getNodeType() == Node.ELEMENT_NODE)
             {
                 Element el = (Element) childNode;
-                System.out.println(el.getAttribute("name") + " = " + el.getTextContent());
+                pairs.add(new ImmutablePair<>(el.getAttribute("name"), el.getTextContent()));
             }
         }
-        ImmutablePair<String, String> pair = new ImmutablePair<>("aa", "bb");
     }
 
-    public static Document parseXml(File xmlFile) {
+    private static Document parseXml(File xmlFile) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = null;
         try {
