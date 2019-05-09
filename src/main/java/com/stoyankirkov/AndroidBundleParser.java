@@ -26,7 +26,10 @@ public class AndroidBundleParser {
     public static void main(String[] args) {
         File dir = new File("files");
         if (dir.exists() && dir.isDirectory() && dir.listFiles() != null) {
-            List<File> files = Arrays.stream(dir.listFiles()).filter(f -> f.getName().endsWith(".xml")).collect(Collectors.toList());
+            List<File> files = Arrays.stream(dir.listFiles())
+                    .filter(f -> f.getName().endsWith(".xml"))
+                    .collect(Collectors.toList());
+
             for (File xmlFile : files) {
                 Document doc = parseXml(xmlFile);
                 parseRows(doc, xmlFile.getName());
@@ -55,9 +58,9 @@ public class AndroidBundleParser {
         if (pairs.size() == 0) {
             return;
         }
-
+        String newFileName = fileName.substring(0, fileName.indexOf("."));
         Workbook workbook = new XSSFWorkbook();
-        Sheet sheet = workbook.createSheet(fileName);
+        Sheet sheet = workbook.createSheet(newFileName);
         int rowNum = 0;
         createRow(sheet, rowNum++, "Key", "Value");
 
@@ -66,7 +69,7 @@ public class AndroidBundleParser {
         }
 
         // Write the output to a file
-        try (OutputStream fileOut = new FileOutputStream("files/" + fileName + ".xlsx")) {
+        try (OutputStream fileOut = new FileOutputStream("files/" + newFileName + ".xlsx")) {
             workbook.write(fileOut);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

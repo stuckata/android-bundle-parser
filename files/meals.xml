@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="br001">Една основна закуска и втора закуска след два часа (сок или парче плод).</string>
+    <string name="br002">100 гр. (= 0.22 паунда) сирене или извара и салата</string>
+    <string name="br003">Сладка вечеря и чаша чай</string>
+    <string name="br004">1 голяма купа кисело мляко с 2 супени лъжици мюсли</string>
+    <string name="br005">Пудинг с нискомаслено мляко без захар (може да се овкуси с малко мед)</string>
+    <string name="br006">Овкусена салата или зеленчуци на плоча</string>
+    <string name="br007">1 голяма купа кисело мляко с 3 пълнозърнести бисквити</string>
+    <string name="br008">1 голяма купа кисело мляко с 1 супена лъжица овесени ядки</string>
+    <string name="br009">1 голяма купа кисело мляко с 1 супена лъжица мюсли</string>
+    <string name="br010">Пилешко или говеждо месо</string>
+    <string name="br011">Мляко с ориз (може да се подслади с малко мед)</string>
+    <string name="br012">Зелена салата и 100 гр. (= 0.22 паунда) месо с ниско съдържание на мазнини (диетичен салам, шунка или друго)</string>
+    <string name="br013">Зеленчукови кюфтета и салата</string>
+    <string name="br014">Зелена салата с малко пилешко месо</string>
+    <string name="br015">1 голяма купа кисело мляко с 1 супена лъжица мюсли или смлени ядки</string>
+    <string name="br016">Зеленчукова салата, овкусена с 1 чаена лъжичка майонеза, 1 чаена лъжичка кисело мляко и 1 чаена лъжичка горчица</string>
+    <string name="br017">Овкусена зеленчукова салата</string>
+    <string name="br018">Смес от говеждо и свинско месо</string>
+    <string name="br019">1 голяма купа кисело мляко с 1 супена лъжица смлени ядки</string>
+    <string name="br020">Пиле</string>
+    <string name="br021">Моцарела</string>
+    <string name="br022">Тофу</string>
+    <string name="br023">Свинско</string>
+    <string name="br024">Риба</string>
+    <string name="br025">Риба или пиле</string>
+    <string name="br026">Извара</string>
+    <string name="br027">Пуешко</string>
+    <string name="br028">Варено месо</string>
+    <string name="br029">Кайма</string>
+    <string name="br030">2 Яйца</string>
+    <string name="br031">Бекон</string>
+    <string name="br032">Месо по избор</string>
+    <string name="br033">Сирене</string>
+    <string name="br034">Шунка</string>
+    <string name="br035">Говеждо</string>
+    <string name="br036">Кнедли с яйце</string>
+    <string name="br037">Пържола по избор</string>
+    <string name="br038">Черен дроб</string>
+    <string name="br039">Протеини по избор</string>
+    <string name="br040">Бекон с яйце</string>
+    <string name="br041">Кайма (смес - говерждо и свинско)</string>
+</resources>
