@@ -17,24 +17,30 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class AndroidBundleParser {
 
     public static void main(String[] args) {
         File dir = new File("files");
-        if (dir.exists() && dir.isDirectory() && dir.listFiles() != null) {
-            List<File> files = Arrays.stream(dir.listFiles())
-                    .filter(f -> f.getName().endsWith(".xml"))
-                    .collect(Collectors.toList());
 
-            for (File xmlFile : files) {
-                Document doc = parseXml(xmlFile);
-                parseRows(doc, xmlFile.getName());
+        if (dir.exists() && dir.isDirectory() && dir.listFiles() != null) {
+            File[] files = dir.listFiles();
+//            List<File> files = Arrays.stream(dir.listFiles())
+//                    .filter(f -> f.getName().endsWith(".xml"))
+//                    .collect(Collectors.toList());
+
+            for (File file : files) {
+                if (file.getName().endsWith(".xml")) {
+                    parseXml(file);
+                } else if (file.getName().endsWith(".xlsx")) {
+                    parseXlsx(file);
+                }
             }
         }
+    }
+
+    private static void parseXlsx(File file) {
     }
 
     private static void parseRows(Document doc, String fileName) {
@@ -88,7 +94,7 @@ public class AndroidBundleParser {
     }
 
 
-    private static Document parseXml(File xmlFile) {
+    private static void parseXml(File xmlFile) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = null;
         try {
@@ -98,12 +104,11 @@ public class AndroidBundleParser {
         }
         try {
             Document doc = builder.parse(xmlFile);
-            return doc;
+            parseRows(doc, xmlFile.getName());
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
     }
 }
