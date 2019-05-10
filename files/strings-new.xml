@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
     <string name="about_us">За нас</string>
     <string name="action_settings">Настройки</string>
@@ -77,8 +77,6 @@
     <string name="water_day">Вода</string>
     <string name="weight">Тегло</string>
     <string name="weight_chart">Тегло</string>
-
-
     <string name="indicators">Мерки</string>
     <string name="edit_indicator">Променете числото или го изтрийте, за да премахнете записа.</string>
     <string name="edit_notes">Променете текста или го изтрийте, за да премахнете записа.</string>
